@@ -11,7 +11,10 @@ def testMethod():
     thisMonth = TodayDate.strftime("%B")
     thisWeekDay = TodayDate.strftime("%A")
     thisDay = TodayDate.strftime("%d")
-    date = 'The current date time is ' + thisWeekDay + ', ' + thisMonth + ' ' + thisDay + ' ' + thisYear
+    thisHour = TodayDate.strftime("%H")
+    thisMin = TodayDate.strftime("%M")
+    thisSec = TodayDate.strftime("%S")
+    date = 'The current date time is ' + thisWeekDay + ', ' + thisMonth + ' ' + thisDay + ' ' + thisYear + ' ' + thisHour + ' ' + thisMin + ' ' + thisSec
     return render_template('get.html', htmlDate = date)
 
 
